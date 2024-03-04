@@ -82,19 +82,19 @@ function btnEvent() {
                     partID = "bikinitop"
                     break;
                 case 'botclothes':
-                    partID = ""
+                    partID = "bikinibottom"
                     break;
                 case 'shoes':
-                    partID = "body"
+                    partID = "feet"
                     break;
                 case 'handbags':
-                    partID = "body"
+                    partID = "handbag"
                     break;
                 case 'necklaces':
-                    partID = "body"
+                    partID = "necklace"
                     break;
                 case 'hairstyle':
-                    partID = "body"
+                    partID = "hairstyle"
                     break;
                 case 'background':
                     partID = "background"
@@ -109,11 +109,10 @@ function btnEvent() {
 }
 function dressing(partID, img){
     let element = document.querySelector(`.contain .${partID}`);
-    if (partID == 'bikinitop') {
-  
-    }
+
     element.style.backgroundImage =`url(${img})`;
-    element.style.backgroundPosition =  `top`
+    element.style.backgroundSize=  `contain`;
+    element.style.backgroundRepeat= `no-repeat`
     
 }
 renderUI();
